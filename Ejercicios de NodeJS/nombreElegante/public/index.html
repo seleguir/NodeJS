@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Nombre Elegante</title>
+    <script>
+        function esNombreElegante(nombre) {
+            return nombre.startsWith('a') && nombre.endsWith('a');
+        }
+
+        function verificarNombre() {
+            const nombre = document.getElementById('nombre').value.toLowerCase();
+            const esElegante = esNombreElegante(nombre);
+            document.getElementById('resultado').innerText = esElegante ? 'El nombre es elegante' : 'El nombre no es elegante';
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificar Nombre Elegante</h1>
+    <form>
+        <label for="nombre">Ingrese un nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <button type="button" onclick="verificarNombre()">Verificar</button>
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>
